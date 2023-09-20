@@ -14,10 +14,13 @@ const issueSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    label: {
-            type: String,
-           required:true
-        }
+    labels: [
+        {
+          type: String,
+          trim: true,
+          required: true,
+        },
+      ],
     
 },{timestamps:true});
 
