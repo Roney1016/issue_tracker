@@ -7,7 +7,7 @@ module.exports.projectForm = function(req,res){
 // create new project
 module.exports.create = async function(req,res){
    try{
-    console.log(req.body)
+    
     await Project.create(req.body);
 
     return res.redirect('/')
