@@ -1,0 +1,108 @@
+/* issue form  */
+
+
+.btn-create-issue{
+    padding: 10px 15px;
+    background-color: black;
+margin-top: 5px;
+    color: white;
+    position: absolute;
+    right: 8%;
+    
+    
+}
+
+/* .overlay{
+    width: 100%;
+    background:rgba(0, 0, 0, 0.5)
+} */
+
+.login-form{
+    width: 350px;
+   padding: 30px 20px;
+    background-color: white;
+    position: absolute;
+    transition: 2s;
+    left: 50%;
+    top: -50%;
+    box-shadow: 0px 0px 10px 3px #ccc;
+    transform: translate(-50%,-50%);
+    
+}
+
+.login-form_input{
+    width: 100%;
+    margin-bottom: 15px;
+    height: 35px;
+    transition: 0.7s;
+}
+
+.login-form span{
+    position: absolute;
+    right: 0px;
+    width: 30px;
+    color: white;
+    line-height: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-color: green;
+    text-align: center;
+    top:0px;
+}
+
+.show-login-form{
+    top: 50%;
+}
+
+.labels-issue{
+    padding: 5px;
+    border: 1px solid grey;
+}
+
+#btn-submit:hover{
+    border-radius: 5px;
+    background-color: skyblue;
+}
+
+/* project container  */
+
+.project-container{
+    margin-top: 100px;
+    text-align: center;
+    border: 1px solid black;
+    width: 70%;
+    position: absolute;
+    left:15%;
+
+}
+.proj-detail{
+    width: 70%;
+    position: relative;
+    left: 15%;
+   /* border: 1px solid red; */
+   
+}
+.proj-detail div{
+    height: 100px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+    border: 1px solid black;
+}
+.Issue-container{
+   
+    padding-top: 20px;
+    /* position: absolute; */
+    text-align: center;
+   border-top: 1px solid black;
+
+}
+.issue{
+    width: 400px;
+    padding: 20px;
+    background-color: aqua;
+   margin-bottom: 20px;
+   position: relative;
+   left: 30%;
+   border: 1px solid rgb(243, 19, 19);
+}

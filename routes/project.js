@@ -6,5 +6,7 @@ router.get('/create-form',controller.projectForm)
 
 router.post('/create',controller.create)
 
+router.get('/details/:id',controller.projectDetails);
+router.post('/createIssue/:id',controller.createIssue)
 
 module.exports = router;

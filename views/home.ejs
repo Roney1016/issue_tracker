@@ -1,5 +1,29 @@
+<link rel="stylesheet" href="/css/home.css">
 <div id="btn-create-pro" >
-    
-        <a href="/project/create-form"><button>Create Project</button></a>
+    <div class="container-sm text-center ">
+        <a class="btn-details" " href="/project/create-form"><button >Create Project</button></a>
+    </div>
+       
    
+</div>
+
+
+<div id="project-container">
+    <ul id="project_list">
+        <% for(project of projects){ %>
+            <li style="list-style-type: none;">
+                <!-- <div class="project"> -->
+                    <div class="container-sm text-center" style="border: 1px solid goldenrod; margin: 20px; background-color: rgb(244, 178, 116);">   
+                  <p> Project Name - <%= project.name %></p>
+                  <p > Description - <%= project.Description %></p>
+                  <p>Author - <%= project.Author %></p>
+                   <a class="btn-details" href="/project/details/<%=project.id %>">
+                    <button>
+                        Project Details
+                    </button>
+                </a>
+                </div>
+            </li>
+        <% } %>
+    </ul>
 </div>

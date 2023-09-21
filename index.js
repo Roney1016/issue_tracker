@@ -13,6 +13,8 @@ app.use(expressLayouts);
 app.set('layout extractStyles', true);
 app.set('layout extractScripts', true);
 
+// add static files
+app.use(express.static('./assets'))
 //set view engine
 app.set('view engine', 'ejs');
 app.set('views', 'views');

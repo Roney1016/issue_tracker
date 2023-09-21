@@ -24,6 +24,6 @@ const issueSchema = new mongoose.Schema({
     
 },{timestamps:true});
 
-const Issuse = mongoose.model('Issue',issueSchema);
+const Issue = mongoose.model('Issue',issueSchema);
 
-module.exports = Issuse;
+module.exports = Issue;

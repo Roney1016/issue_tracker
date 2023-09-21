@@ -1,0 +1,111 @@
+<link rel="stylesheet" href="/css/details.css">
+<button class="btn-create-issue">Create Issue</button>
+
+<div class="project-container">
+   <div class="proj-detail">
+    <div style="background-color: gray; color: white;" >
+        <h1>
+           Project Name - <%=project.name %>
+        </h1>
+
+    </div>
+    <div>
+        <h1>
+            Description - <%=project.Description%>
+        </h1>
+    </div>
+    <div style="background-color:lightblue; color: white;">
+        <h1 >
+            Author - <%=project.Author %>
+        </h1>
+    </div>
+   </div>
+    
+     <h1 style="margin: 10px; color: brown;">ALL Issue</h1>
+    <div class="Issue-container">
+        <ul>
+            <% if(project.issues.length >=1){%>
+                <% for(let issue of project.issues){ %>
+                    <li style="list-style-type: none;">
+                    <div class="issue">
+                        <h4>
+                           issue title - <%= issue.title %>
+                        </>
+                        <h4>
+                            Description - <%= issue.Description %>
+                        </h4>
+                        <div>
+                            <h4>Labels</h4>
+                        <ul>
+                           
+                        <% for (let la of issue.labels){%>
+                           <li>
+                           <%=la%>
+                           </li>
+                        <%}%>
+                    </ul>
+                    <div>
+                        <h4>
+                            Author - <%= issue.Author %>
+                        </h4>
+        
+                    </div>
+                </li>
+                    <% } %>
+            <%}else{ %>
+               <li> <h2>No issue</h2></li>
+           <% } %>
+        </ul>
+    </div>
+
+</div>
+
+<div class="login-form">
+    <span>&times;</span>
+    <h4>Create Issue</h4>
+    <form action="/project/createIssue/<%=project._id %>" method="post">
+        <div>
+            <label for="title">Title</Title></label>
+            <input type="text" id="title" name="title" required class="login-form_input">
+        </div>
+        <div>
+            <label for="Description">Description</label>
+            <textarea name="Description" id="Description" cols="39" rows="2" class="login-form_input"></textarea>
+        </div>
+        <label for="label">Add labels :-</label>
+        <div class="labels-issue" id="label">
+
+            <div>
+                <input type="checkbox" name="labels" id="bug" value="bug">
+                <label for="bug">bug</label>
+            </div>
+            <div>
+                <input type="checkbox" name="labels" id="UI_improvement" value="UI improvement">
+                <label for="UI_improvement">UI improvement</label>
+            </div>
+            <div>
+                <input type="checkbox" name="labels" id="Documentaion" value="Documentaion">
+                <label for="Documentaion">Documentaion</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="labels" id="Enhancement" value="Enhancement">
+                <label for="Enhancement">Enhancement</label>
+            </div>
+            <div>
+                <input type="checkbox" name="labels" id="duplicate" value="duplicate">
+                <label for="duplicate">duplicate</label>
+            </div>
+        </div>
+
+        <div>
+            <label for="Author">Author</label>
+            <input type="text" id="Author" name="Author" required class="login-form_input">
+        </div>
+        <div>
+            <input type="submit" value="submit" class="login-form_input" id="btn-submit">
+        </div>
+    </form>
+</div>
+
+<script src="/js/details.js"></script>
