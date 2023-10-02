@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const url ='mongodb://127.0.0.1:27017/issueTracker'
+const url ='mongodb+srv://manishkumarravi1016:LJ4N1P0BX0CNjwJZ@cluster0.ahp1mkl.mongodb.net/?retryWrites=true&w=majority'
 mongoose.connect(url);
 
 const db = mongoose.connection;
